@@ -9,12 +9,19 @@ clone:
     tags: true
 
 pipeline:
-  node:
+  node1:
     image: node:8.3.0
     commands:
       - yarn install
       - ./node_modules/.bin/mocha
       - touch /node/a.txt
+
+  node2:
+    image: node:8.3.0
+    group: build
+    commands:
+      - sleep 5
+      - echo "sleep 5"
 
   ls:
     image: node:8.3.0
