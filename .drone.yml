@@ -17,9 +17,9 @@ pipeline:
       - touch /node/a.txt
 
   ls:
-  image: node:8.3.0
-  commands:
-    - ls -al /node/
+    image: node:8.3.0
+    commands:
+      - ls -al /node/
 
   node1:
     image: node:8.3.0
