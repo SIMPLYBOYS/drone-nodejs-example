@@ -9,10 +9,10 @@ clone:
     tags: true
 
 pipeline:
-  fail:
-    image: node:8.3.0
-    commands:
-      - exit 1
+  # fail:
+  #   image: node:8.3.0
+  #   commands:
+  #     - exit 1
 
   master:
     image: node:8.3.0
@@ -28,35 +28,35 @@ pipeline:
     when:
       branch: develop
 
-  push:
-    image: node:8.3.0
-    commands:
-      - echo push
-    when:
-      event: [ push ]
+  # push:
+  #   image: node:8.3.0
+  #   commands:
+  #     - echo push
+  #   when:
+  #     event: [ push ]
 
-  pull_request:
-    image: node:8.3.0
-    commands:
-      - echo pull_request
-    when:
-      event: [ pull_request ]
+  # pull_request:
+  #   image: node:8.3.0
+  #   commands:
+  #     - echo pull_request
+  #   when:
+  #     event: [ pull_request ]
 
-  tags:
-    image: node:8.3.0
-    commands:
-      - echo tags
-    when:
-      event: [ tag ]
+  # tags:
+  #   image: node:8.3.0
+  #   commands:
+  #     - echo tags
+  #   when:
+  #     event: [ tag ]
 
-  success:
-    image: node:8.3.0
-    commands:
-      - echo success
+  # success:
+  #   image: node:8.3.0
+  #   commands:
+  #     - echo success
 
-  notify:
-    image: node:8.3.0
-    commands:
-      - echo notify
-    when:
-      status: [ failure ]
+  # notify:
+  #   image: node:8.3.0
+  #   commands:
+  #     - echo notify
+  #   when:
+  #     status: [ failure ]
