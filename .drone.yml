@@ -35,7 +35,7 @@ pipeline:
       - sleep 10
       - echo "sleep 10"
   
-  node2:
+  node3:
     image: node:8.3.0
     group: build
     commands:
